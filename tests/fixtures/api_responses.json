@@ -1,0 +1,124 @@
+{
+  "chat_create_success": {
+    "chat": {
+      "id": "550e8400-e29b-41d4-a716-446655440000",
+      "agent": {
+        "id": "550e8400-e29b-41d4-a716-446655440001",
+        "name": "General Assistant",
+        "description": "A helpful general-purpose assistant",
+        "image": null,
+        "status": true,
+        "system_agent": false,
+        "transcription": null
+      },
+      "user": {
+        "email": "test@example.com",
+        "full_name": "Test User"
+      },
+      "folder": null,
+      "message": "Hello, how can I help?",
+      "knowledge": [],
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "system_chat": false
+    },
+    "messages": [
+      {
+        "id": "msg-1",
+        "chat_id": "550e8400-e29b-41d4-a716-446655440000",
+        "message": "Hello, how can I help?",
+        "message_type": "user",
+        "created_at": "2024-01-01T00:00:00Z",
+        "files": []
+      },
+      {
+        "id": "msg-2",
+        "chat_id": "550e8400-e29b-41d4-a716-446655440000",
+        "message": "Hello! I'm here to assist you.",
+        "message_type": "agent",
+        "created_at": "2024-01-01T00:00:01Z",
+        "files": []
+      }
+    ]
+  },
+  "agents_list_success": [
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440001",
+      "name": "General Assistant",
+      "description": "A helpful general-purpose assistant",
+      "image": null,
+      "status": true,
+      "system_agent": false,
+      "transcription": null
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440002",
+      "name": "Code Helper",
+      "description": "Specialized in programming and code review",
+      "image": "https://example.com/code-agent.jpg",
+      "status": true,
+      "system_agent": false,
+      "transcription": null
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440003",
+      "name": "Research Assistant",
+      "description": "Expert in research and data analysis",
+      "image": null,
+      "status": true,
+      "system_agent": true,
+      "transcription": "Capable of analyzing complex datasets"
+    }
+  ],
+  "file_upload_success": {
+    "file_id": "file-12345",
+    "filename": "test-document.pdf",
+    "size": 2048,
+    "content_type": "application/pdf",
+    "upload_url": "https://storage.example.com/files/file-12345",
+    "created_at": "2024-01-01T00:00:00Z"
+  },
+  "error_responses": {
+    "unauthorized": {
+      "error": "Unauthorized",
+      "message": "Invalid API key",
+      "code": 401
+    },
+    "rate_limit": {
+      "error": "Rate limit exceeded",
+      "message": "Too many requests. Try again in 60 seconds",
+      "code": 429,
+      "retry_after": 60
+    },
+    "agent_not_found": {
+      "error": "Agent not found",
+      "message": "The specified agent does not exist",
+      "code": 404
+    },
+    "validation_error": {
+      "error": "Validation error",
+      "message": "Message cannot be empty",
+      "code": 422,
+      "details": {
+        "field": "message",
+        "constraint": "min_length"
+      }
+    },
+    "internal_server_error": {
+      "error": "Internal server error",
+      "message": "An unexpected error occurred",
+      "code": 500
+    }
+  },
+  "streaming_chunks": [
+    "data: {\"token\": \"Hello\"}\n\n",
+    "data: {\"token\": \" there!\"}\n\n",
+    "data: {\"token\": \" How\"}\n\n",
+    "data: {\"token\": \" can\"}\n\n",
+    "data: {\"token\": \" I\"}\n\n",
+    "data: {\"token\": \" help\"}\n\n",
+    "data: {\"token\": \" you\"}\n\n",
+    "data: {\"token\": \" today?\"}\n\n",
+    "data: [DONE]\n\n"
+  ]
+} 
